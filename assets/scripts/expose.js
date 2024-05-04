@@ -1,16 +1,16 @@
 // expose.js
 
+const jsConfetti = new JSConfetti();
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  // setting up HTML element selectors and confetti
+  // setting up HTML element selectors
   const hornSelect = document.querySelector("#horn-select");
   const hornImg = document.querySelector("#expose img");
   const volumeImg = document.querySelector("#volume-controls img");
   const audio = document.querySelector("audio");
   const volumeSelect = document.querySelector("#volume");
   const audioButton = document.querySelector("button");
-  const jsConfetti = new JSConfetti();
 
   let option = hornSelect.value;
 
