@@ -37,12 +37,8 @@ function init() {
     const utterThis = new SpeechSynthesisUtterance(textarea.value);
     const selectedOption =
       voiceSelect.selectedOptions[0].getAttribute("data-name");
-    for (let i = 0; i < voices.length; i++) {
-      if (voices[i].name === selectedOption) {
-        utterThis.voice = voices[i];
-      }
-    }
-    console.log(faceImg);
+    utterThis.voice = voices[voiceSelect.selectedIndex - 1];
+    
     synth.speak(utterThis);
     let hasSpoken = false;
     let speakCheckerID = setInterval(function() {
